@@ -6,13 +6,13 @@
 	<thead>
 		<tr class="table-header-row">
 			<th scope="col">TXN</th>
-			<th scope="col">STATUS</th>
-			<th scope="col">BLOCK</th>
-			<th scope="col">TIME</th>
-			<th scope="col">FROM</th>
-			<th scope="col">CONTRACT</th>
-			<th scope="col">METHOD</th>
-			<th scope="col">FEES</th>
+			<th scope="col">Status</th>
+			<th scope="col">Block</th>
+			<th scope="col">Age</th>
+			<th scope="col">From</th>
+			<th scope="col">Contract</th>
+			<th scope="col">Method</th>
+			<th scope="col">Fees</th>
 		</tr>
 	</thead>
 	<tbody>
