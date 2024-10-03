@@ -5,6 +5,7 @@
 <div class="spacer"></div>
 
 <h2 class="page-title">Transactions</h2>
+<hr />
 
 <Table />
 
@@ -14,5 +15,10 @@
 	}
 	.spacer {
 		margin: 36px 0;
+	}
+	hr {
+		border: none;
+		border-top: 1px solid var(--row-border);
+		margin: 16px 0 22px;
 	}
 </style>
