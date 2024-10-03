@@ -1,16 +1,23 @@
 <script>
 	import Table from '$components/Table.svelte';
 	import TableControls from '$components/TableControls.svelte';
+	import Footer from '$components/Footer.svelte';
+	import Spacer from '$components/Spacer.svelte';
 </script>
 
-<div class="spacer"></div>
+<Spacer />
 
 <h2 class="page-title">Transactions</h2>
 <hr />
 
 <TableControls />
 <Table />
+<Spacer />
 <TableControls />
+
+<Spacer />
+
+<Footer />
 
 <style>
 	.page-title {
