@@ -1,5 +1,14 @@
 <script>
 	import { transactions } from '$userStores/transactions.store';
+	import Icon from '@iconify/svelte';
+
+	const transaction_action_icons = {
+		transfer: 'mingcute:transfer-3-line',
+		mint: 'mingcute:pickax-line',
+		burn: 'mingcute:fire-line',
+		stake: 'mingcute:safe-lock-line',
+		swap: 'mingcute:refresh-4-line'
+	};
 </script>
 
 <table>
@@ -37,7 +46,14 @@
 					></td
 				>
 				<td class:transaction-failed-row={transaction.status === 'FAILED'}>{transaction.type}</td>
-				<td class:transaction-failed-row={transaction.status === 'FAILED'}>{transaction.action}</td>
+				<td class:transaction-failed-row={transaction.status === 'FAILED'}>
+					<div class="transaction-type-box">
+						<div class="transaction-box-icon-container">
+							<Icon icon={transaction_action_icons[transaction.action]} style="display: block;" />
+						</div>
+						<p class="transaction-box-text">{transaction.action}</p>
+					</div>
+				</td>
 				<td class:transaction-failed-row={transaction.status === 'FAILED'}>{transaction.value}</td>
 			</tr>
 		{/each}
@@ -112,9 +128,15 @@
 		background-color: var(--transaction-failed-background);
 		color: var(--transaction-failed-text);
 	}
-
 	.transaction-failed-row {
 		opacity: 0.7;
 		filter: contrast(95%);
+	}
+
+	.transaction-type-box {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 5px;
 	}
 </style>
