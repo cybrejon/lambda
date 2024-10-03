@@ -75,18 +75,14 @@
 		font-size: 0.9rem;
 		color: var(--text80);
 
-		&:first-child {
-			padding-left: 16px;
-		}
 		&:last-child {
-			padding-right: 16px;
 			text-align: right;
 		}
 	}
 
 	tr:not(.table-header-row) {
 		box-shadow: 0 2px 5px var(--row-shadow);
-		border-radius: 7px;
+		border-radius: 9px;
 	}
 
 	td {
