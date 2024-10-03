@@ -40,6 +40,7 @@
 	:global(body) {
 		font-family: 'Roboto', sans-serif;
 		font-optical-sizing: auto;
+		color: var(--text);
 		background-color: var(--background-color);
 	}
 
